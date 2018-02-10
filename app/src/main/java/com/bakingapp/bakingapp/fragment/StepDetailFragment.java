@@ -4,7 +4,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -156,9 +155,21 @@ public class StepDetailFragment extends android.app.Fragment {
 
 
     @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        if (savedInstanceState != null) {
+            step = savedInstanceState.getParcelableArrayList("steps");
+            position = savedInstanceState.getInt("position");
+            pos = savedInstanceState.getLong("position_player");
+        }
+
+    }
+
+
+    @Override
     public void onResume() {
         super.onResume();
-
+        initializePlayer(Uri.parse(video));
     }
 
     @Override
