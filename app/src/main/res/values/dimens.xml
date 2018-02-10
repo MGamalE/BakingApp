@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="padding_mid">15dp</dimen>
+    <dimen name="margin_sm">5dp</dimen>
+    <dimen name="recipe_marginl">12dp</dimen>
+    <dimen name="margin_mid">10dp</dimen>
+    <dimen name="margin_mid2">5dp</dimen>
+    <dimen name="text_big">25sp</dimen>
+    <dimen name="text_s2">26sp</dimen>
+    <dimen name="heigh_exo">250dp</dimen>
+    <dimen name="txt_exo">18sp</dimen>
+    <dimen name="padding_exo">20dp</dimen>
+    <dimen name="mar_card">3dp</dimen>
+    <dimen name="txt_ingre">16sp</dimen>
+    <dimen name="txt_q">14sp</dimen>
+    <dimen name="txt_m">14sp</dimen>
+    <dimen name="recipe_height">250dp</dimen>
+    <dimen name="image_h">200dp</dimen>
+    <dimen name="txt_step">22sp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+
+</resources>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Baking App</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add Ingredients Widget</string>
+    <string name="prev_s">Prev Step</string>
+    <string name="next_s">Next Step</string>
+    <string name="step_des">Step Description</string>
+    <string name="txt_ingre">Nutella or other chocolate-hazelnut spread</string>
+    <string name="txt_q">2</string>
+    <string name="txt_m">TSP</string>
+    <string name="txt_step">Recipe Introduction</string>
+</resources>

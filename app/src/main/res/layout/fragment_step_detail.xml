@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/step_contain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_sm"
+            android:orientation="vertical">
+
+            <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                android:id="@+id/step_video"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heigh_exo" />
+
+            <ImageView
+                android:id="@+id/recipe_step_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heigh_exo"
+                android:src="@drawable/recipe_image"
+                android:visibility="gone" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_sm"
+                android:background="#e7e7e7">
+
+                <TextView
+                    android:id="@+id/step_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin_mid"
+                    android:gravity="center_horizontal"
+                    android:text="@string/step_des"
+                    android:textSize="@dimen/txt_exo"
+                    android:textStyle="bold" />
+            </ScrollView>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/previous_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/step_contain"
+            android:background="#FF11EEEE"
+            android:onClick="back"
+            android:padding="@dimen/padding_exo"
+            android:text="@string/prev_s" />
+
+        <Button
+            android:id="@+id/next_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/step_contain"
+            android:background="#FF11EEEE"
+            android:onClick="next"
+            android:padding="@dimen/padding_exo"
+            android:text="@string/next_s" />
+
+    </RelativeLayout>
+
+</ScrollView>

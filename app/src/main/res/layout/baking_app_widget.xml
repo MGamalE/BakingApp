@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ingredient_widget"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/list_ingredient_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_sm"
+        android:background="#263c3e"
+        android:padding="@dimen/padding_mid"
+        android:text="Test Ingredient Widget View "
+        android:textColor="#FFF" />
+</LinearLayout>
