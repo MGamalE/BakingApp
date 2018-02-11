@@ -36,6 +36,7 @@ public class StepDetailFragment extends android.app.Fragment {
     ArrayList<Recipe> recipe;
     long pos;
     String video;
+    Boolean getPlayerWhenReady = true;
     private SimpleExoPlayer player;
     private SimpleExoPlayerView exoPlayerView;
     private TextView stepDescription;
@@ -64,9 +65,11 @@ public class StepDetailFragment extends android.app.Fragment {
             step = savedInstanceState.getParcelableArrayList("steps");
             position = savedInstanceState.getInt("position");
             pos = savedInstanceState.getLong("position_player");
+            getPlayerWhenReady = savedInstanceState.getBoolean("state");
         } else {
             step = getArguments().getParcelableArrayList("steps");
-            position = getArguments().getInt("pos");
+            position = getArguments().getInt("position");
+
         }
 
         handleUi();
@@ -147,7 +150,7 @@ public class StepDetailFragment extends android.app.Fragment {
                     new DefaultTrackSelector(), new DefaultLoadControl());
             if (pos != C.TIME_UNSET) player.seekTo(pos);
             exoPlayerView.setPlayer(player);
-            player.setPlayWhenReady(true);
+            player.setPlayWhenReady(getPlayerWhenReady);
             MediaSource mediaSource = buildMediaSource(uri);
             player.prepare(mediaSource, true, false);
         }
@@ -174,6 +177,7 @@ public class StepDetailFragment extends android.app.Fragment {
 
     @Override
     public void onPause() {
+        getPlayerWhenReady = player.getPlayWhenReady();
         super.onPause();
         if (player != null) {
             pos = player.getCurrentPosition();
@@ -207,6 +211,7 @@ public class StepDetailFragment extends android.app.Fragment {
         currentState.putParcelableArrayList("steps", step);
         currentState.putInt("position", position);
         currentState.putLong("position_player", pos);
+        currentState.putBoolean("state", getPlayerWhenReady);
     }
 
 }

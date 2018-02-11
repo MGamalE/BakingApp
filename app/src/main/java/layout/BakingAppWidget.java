@@ -44,7 +44,9 @@ public class BakingAppWidget extends AppWidgetProvider {
             allIngredients += " " + ingredients.get(i).getIngredient() + " ** " + ingredients.get(i).getQuantity() + " ** " + ingredients.get(i).getMeasure() + "\n \n";
         }
 
-        view.setTextViewText(R.id.list_ingredient_widget, allIngredients);
+        if (allIngredients != null) {
+            view.setTextViewText(R.id.list_ingredient_widget, allIngredients);
+        }
 
 
         // Instruct the widget manager to update the widget

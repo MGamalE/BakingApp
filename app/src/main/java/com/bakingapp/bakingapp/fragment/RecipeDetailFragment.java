@@ -95,6 +95,7 @@ public class RecipeDetailFragment extends android.app.Fragment {
                     @Override
                     public void onItemClick(View v, int position) {
 
+
                         if (tabletSize) {
                             Bundle bundle = new Bundle();
                             bundle.putParcelableArrayList("steps", step);
@@ -140,7 +141,7 @@ public class RecipeDetailFragment extends android.app.Fragment {
         outState.putInt("ingredient",
                 ((LinearLayoutManager) recyclerViewIngredient.getLayoutManager()).findFirstVisibleItemPosition());
 
-        if (tabletSize)
+        if (tabletSize && StepDetailFragment != null)
             getFragmentManager().putFragment(outState, "stepDetailFragment", StepDetailFragment);
 
 

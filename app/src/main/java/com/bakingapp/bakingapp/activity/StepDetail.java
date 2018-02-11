@@ -19,18 +19,23 @@ public class StepDetail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.step_detail_layout);
 
+
         if (savedInstanceState != null) {
             stepDetailFragment = (StepDetailFragment) getFragmentManager().getFragment(savedInstanceState, "stepDetailFragment");
+
+            if (!stepDetailFragment.isAdded()) {
+                getFragmentManager().beginTransaction().replace(R.id.step_detail, stepDetailFragment).commit();
+            }
+
         } else {
             stepDetailFragment = new StepDetailFragment();
             Bundle bundle = getIntent().getExtras();
             stepDetailFragment.setArguments(bundle);
-        }
-
-
-        if (!stepDetailFragment.isAdded()) {
             getFragmentManager().beginTransaction().replace(R.id.step_detail, stepDetailFragment).commit();
+
         }
+
+
     }
 
     @Override
