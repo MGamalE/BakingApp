@@ -1,6 +1,7 @@
 package com.bakingapp.bakingapp;
 
 import android.support.test.espresso.Espresso;
+import android.support.test.espresso.contrib.RecyclerViewActions;
 import android.support.test.espresso.idling.CountingIdlingResource;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
@@ -25,6 +26,7 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+
 
 @RunWith(AndroidJUnit4.class)
 public class BakingAppTest {
